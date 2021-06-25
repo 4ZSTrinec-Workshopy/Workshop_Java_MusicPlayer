@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="228.0" prefWidth="400.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+   <children>
+      <Pane onMouseDragged="#panel_dragged" onMousePressed="#panel_pressed" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #121212;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="370.0" onMousePressed="#exit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://img.icons8.com/ios-glyphs/2x/ffffff/multiply.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="340.0" onMousePressed="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://img.icons8.com/ios-glyphs/2x/ffffff/minus-math.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="8.0" layoutY="8.0" onMousePressed="#select_playlist" text="Select Playlist" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label layoutX="163.0" layoutY="40.0" text="Playing" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPlaying" alignment="CENTER" layoutX="-5.0" layoutY="97.0" prefHeight="17.0" prefWidth="407.0" text="#########" textAlignment="CENTER" textFill="WHITE" />
+      <Pane layoutX="100.0" layoutY="158.0" prefHeight="70.0" prefWidth="400.0" style="-fx-background-color: #282828;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fx:id="pause_button" fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="5.0" onMousePressed="#pause" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://img.icons8.com/ios-glyphs/2x/ffffff/play.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="140.0" layoutY="5.0" onMousePressed="#prev_song" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://img.icons8.com/ios-glyphs/2x/ffffff/skip-to-start.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="230.0" layoutY="5.0" onMousePressed="#next_song" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://img.icons8.com/ios-glyphs/2x/ffffff/end.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="slider" layoutY="55.0" prefHeight="14.0" prefWidth="400.0" />
+            <Slider fx:id="volume" layoutX="280.0" layoutY="35.0" prefHeight="14.0" prefWidth="106.0" />
+         </children>
+      </Pane>
+      <MediaView fx:id="mediaView" fitHeight="10.0" fitWidth="10.0" layoutX="100.0" layoutY="14.0" />
+   </children>
+</AnchorPane>
